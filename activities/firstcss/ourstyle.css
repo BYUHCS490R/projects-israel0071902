@@ -1,0 +1,11 @@
+  main ol {
+       color: rgba(235, 0, 59, 0.946);
+       font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    header p {
+       color: rgba(239, 5, 251, 0.946);
+       font-size: larger;
+       background-color:blue;
+       font-weight: bold;
+    }
