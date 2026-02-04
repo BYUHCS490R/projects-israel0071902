@@ -1,0 +1,30 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main p {
+    color: aqua;
+    font-size: 20pt;
+}
+
+#second {
+    color: greenyellow;
+    font-family: Jokerman;
+}
+
+.larger {
+    font-size: 15pt;
+    color: pink;
+}
+
+.pink {
+    color: pink;
+}
+
+.blue {
+    color: dodgerblue;
+}
+
+.purple {
+    color: purple;
+}
