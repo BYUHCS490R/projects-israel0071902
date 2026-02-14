@@ -39,7 +39,7 @@ main {
    
     background-image: url("biryanis.png");
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: right center;
     background-size: 250px;
 }
 
