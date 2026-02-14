@@ -1,0 +1,109 @@
+body {
+    background-image: url("biryani.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+nav {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: darkred;
+}
+.current{
+
+    color: blue;
+    text-decoration: none;
+    border-bottom: 2px solid blue;
+}
+
+main {
+
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+
+   
+    background-image: url("biryanis.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 250px;
+}
+
+
+
+
+
+img {
+    width: 350px;
+    margin: 10px;
+}
+
+.home {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    font-weight: 900;
+}
+
+p, li {
+    font-weight: 600;
+}
+
+
+nav a {
+    font-weight: 700;
+}
+
+ .placelist {
+    list-style: none;
+    padding-left: 0;
+}
+
+.placelist li {
+    padding-left: 28px;
+    position: relative;
+}
+
+.placelist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-image: url("spoonfork.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(227, 100, 100);
+    padding: 15px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(18, 241, 182);
+    padding: 10px;
+}
