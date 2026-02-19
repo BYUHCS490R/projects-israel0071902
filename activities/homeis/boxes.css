@@ -76,13 +76,7 @@ main h2 {
     color: #ff7a00;
 }
 
-/* Ordered List Fix */
-ol {
-    width: 70%;
-    margin: 0 auto;
-    text-align: left;
-    line-height: 1.6;
-}
+
 
 /* ===== BOX MODEL IMAGE SECTION ===== */
 .minipicture {
@@ -111,4 +105,16 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+ol {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left !important;
+    padding-left: 40px;
+    line-height: 1.8;
+}
+
+ol li {
+    margin-bottom: 15px;
 }
