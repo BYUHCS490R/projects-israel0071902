@@ -1,0 +1,91 @@
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f4f8fb;
+    margin: 0;
+}
+
+
+header {
+    background: linear-gradient(135deg, #0f4c81, #1e90ff);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    font-size: 48px;
+    color: #0f4c81;     
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 60px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+
+nav {
+    background-color: #ff7a00;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+
+nav a:hover {
+    color: #0f4c81;
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+
+nav a:active {
+    color: red;
+}
+
+
+nav a:visited {
+    color: #ffd6a5;
+}
+
+
+main {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+
+.minipicture {
+    width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #e3f2fd;
+    border: 15px solid #ff7a00;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.minipicture img {
+    width: 100%;
+    display: block;
+}
+
+
+footer {
+    background-color: #0f4c81;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
