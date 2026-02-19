@@ -1,23 +1,17 @@
-
+/* ===== BODY ===== */
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #f4f8fb;
     margin: 0;
 }
 
-
+/* ===== HEADER ===== */
 header {
     background: linear-gradient(135deg, #0f4c81, #1e90ff);
     height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-main h1 {
-    font-size: 48px;
-    color: #0f4c81;     
-    margin-bottom: 20px;
 }
 
 header h1 {
@@ -27,7 +21,7 @@ header h1 {
     letter-spacing: 2px;
 }
 
-
+/* ===== NAVIGATION ===== */
 nav {
     background-color: #ff7a00;
     text-align: center;
@@ -42,7 +36,7 @@ nav a {
     transition: 0.3s ease;
 }
 
-
+/* Hover */
 nav a:hover {
     color: #0f4c81;
     background-color: white;
@@ -50,24 +44,47 @@ nav a:hover {
     border-radius: 5px;
 }
 
-
+/* Click */
 nav a:active {
     color: red;
 }
 
-
+/* Visited */
 nav a:visited {
     color: #ffd6a5;
 }
 
-
+/* ===== MAIN ===== */
 main {
     background-color: #ffffff;
     padding: 60px 0;
-    text-align: center;
 }
 
+/* Main Titles */
+main h1 {
+    font-size: 55px;
+    color: #0f4c81;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+main h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ff7a00;
+}
+
+/* Ordered List Fix */
+ol {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* ===== BOX MODEL IMAGE SECTION ===== */
 .minipicture {
     width: 600px;
     margin: 60px auto;
@@ -82,7 +99,13 @@ main {
     display: block;
 }
 
+.minipicture figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
 
+/* ===== FOOTER ===== */
 footer {
     background-color: #0f4c81;
     color: white;
