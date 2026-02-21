@@ -1,0 +1,44 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Main image style */
+.Galaxy {
+    width: 500px;
+    border: thin solid black;
+    float: left;
+}
+
+.Galaxy img {
+    width: 100%;
+}
+
+/* First paragraph width */
+.first {
+    width: 700px;
+}
+
+/* Clear float */
+.clear {
+    clear: both;
+}
+
+/* Float left class */
+.floatleft {
+    float: left;
+}
+
+/* Small fixed image in top right */
+.place {
+    width: 100px;
+    position: fixed;
+    right: 100px;
+    top: 50px;
+}
+
+/* Optional relative example */
+.relativer {
+    float: right;
+    position: relative;
+    top: 20px;
+}
