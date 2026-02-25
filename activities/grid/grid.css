@@ -1,0 +1,38 @@
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header"
+                           "side side side"
+                           "main main main"
+                           "footer footer footer";
+}
+
+.card {
+    background-color: cadetblue;
+    color: white;
+    margin: 3px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: side;
+
+}
+
+main{
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
