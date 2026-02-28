@@ -1,0 +1,33 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content:space-evenly;
+}
+nav a {
+    display: block;
+    padding: 5px;
+    background-color: cadetblue;
+    color: white;
+    text-decoration: none;
+}
+#parent {
+    display: flex;
+    flex-flow: row wrap;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    gap: 5px;
+   
+}
+.card {
+    background-color: aquamarine;
+    border: thin solid black;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.highlight {
+    order: -1;
+}
