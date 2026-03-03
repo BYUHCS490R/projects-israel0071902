@@ -1,0 +1,179 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: black;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+nav a:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* SIDEBAR */
+aside {
+    width: 20%;
+    background-color: #fff4e6; /* soft cream */
+    padding: 25px 20px;
+    border-right: 1px solid #ddd;
+}
+
+/* Sidebar Title */
+aside h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Sidebar Links */
+aside a {
+    display: block;
+    text-decoration: none;
+    color: #333;      /* slightly darker */
+    font-weight: 600; /* makes it semi-bold */
+    padding: 8px 0;
+    margin-bottom: 8px;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+/* Hover effect */
+aside a:hover {
+    color: orange;
+    padding-left: 8px; /* slight movement */
+}
+
+/* When clicked */
+aside a:active,
+aside a:focus {
+    color: blue;
+}
+
+/* MAIN CONTENT */
+main {
+    width: 80%;
+    padding: 20px;
+}
+
+/* CARDS (3 UP, 3 DOWN) */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    border: 1px solid gray;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+button {
+    padding: 6px 10px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* FOOTER */
+footer {
+    background-color: #111; /* Black background */
+    color: white;
+    padding: 40px 60px;
+}
+
+/* Footer Layout */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Brand */
+.footer-brand {
+    width: 200px;
+}
+
+.footer-brand h2 {
+    color: orange;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Columns */
+.footer-column {
+    width: 150px;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Footer Links */
+.footer-column a {
+    display: block;
+    text-decoration: none;
+    color: #ccc; /* Light gray links */
+    margin-bottom: 6px;
+}
+
+.footer-column a:hover {
+    color: orange;
+}
+
+/* Bottom Section */
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
