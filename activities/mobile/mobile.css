@@ -89,14 +89,14 @@ footer{
     margin-top: 20px;
 }
 
-/* Mobile */
+
 @media (max-width: 768px){
     .card{
         width: 90%;
     }
 }
 
-/* Print */
+
 @media only print{
     body{
         font-family: 'Courier New', Courier, monospace;
@@ -104,4 +104,30 @@ footer{
     nav{
         display: none;
     }
+}
+
+@media only screen And (max-width: 600px){
+    body{
+        background-color: #FFF8E7;
+    }
+    
+    nav{
+        flex-direction: column;
+    }
+
+    nav a{
+        border-bottom: thin solid white;
+    }
+    .card{
+        width: 95%;
+    }
+
+    .row{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .main-card {
+        order: -1;
+    }
+    
 }
