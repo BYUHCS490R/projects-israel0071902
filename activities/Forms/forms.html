@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Israel web Design</h1>
+    </header>
+    <main>
+        <form action="forms.html" method="get">
+            <div>
+                <label for="fname">Name:</label>
+                <input type="text" name="fullname" id="fname" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="name@email.com">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="pass" id="password">
+            </div>
+            <div>
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="CA">California</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="UT">Utah</option>
+                </select>
+            </div>
+            <div>
+                <label for="comments">Comments</label>
+                <textarea name="comments" id="comments">Pre-filled in</textarea>
+            </div>
+            <div>
+                Gender:
+                <label><input type="radio" name="Gender" value="male"> Male</label>
+                <label><input type="radio" name="Gender" value="female"> Female</label>
+            </div>
+            <div>
+                <label><input type="checkbox" name="remember" value="yes" checked> Remember me?</label>
+            </div>
+            <div>
+                <input type="submit" value="Sign Up">
+            </div>
+
+        </form>
+
+            <p> 1&rpar; The "action" attribute in the form tag tells where the form data will be sent after the user clicks submit.</p>
+
+            <p> 2&rpar; The "method" attribute tells how the form data will be sent to the server, usually using GET or POST.</p>
+
+            <p> 3&rpar; The difference between GET and POST is that GET sends data in the URL and is less secure, while POST sends data in the request body and is more secure.</p>
+    </main>
+    
+    <footer>
+            <p>&copy; 2026 Israel Limma</p>
+    </footer>
+
+    </body>
+
+</html>
