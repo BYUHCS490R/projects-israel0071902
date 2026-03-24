@@ -17,6 +17,7 @@
     <form action="forms.html" method="get">
 
         <fieldset>
+            <legend>Sign Up Form</legend>
 
             <div class="form-row">
                 <label for="fname">Name:</label>
@@ -34,6 +35,16 @@
             </div>
 
             <div class="form-row">
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" name="birthdate" id="birthdate" class="short-input">
+            </div>
+
+            <div class="form-row">
+                <label for="time">Time:</label>
+                <input type="time" name="time" id="time" class="short-input">
+            </div>
+
+            <div class="form-row">
                 <label for="state">State:</label>
                 <select name="state" id="state">
                     <option value="CA">California</option>
@@ -48,14 +59,34 @@
             </div>
 
             <div class="form-row">
-                <span class="spacer">Gender:</span>
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label class="group-label">Gender:</label>
+                <div class="option-group">
+                    <label class="option-label"><input type="radio" name="gender" value="male"> Male</label>
+                    <label class="option-label"><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label class="group-label">Languages Known:</label>
+                <div class="option-group">
+                    <label class="option-label"><input type="checkbox" name="language" value="english"> English</label>
+                    <label class="option-label"><input type="checkbox" name="language" value="telugu"> Telugu</label>
+                    <label class="option-label"><input type="checkbox" name="language" value="hindi"> Hindi</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="skill">Proficiency:</label>
+                <input type="range" name="skill" id="skill" min="0" max="100" value="50">
             </div>
 
             <div class="checkbox-row">
                 <span class="spacer"></span>
-                <label><input type="checkbox" name="remember" value="yes" checked> Remember me?</label>
+                <div class="option-group">
+                    <label class="option-label">
+                        <input type="checkbox" name="remember" value="yes" checked> Remember me?
+                    </label>
+                </div>
             </div>
 
             <div class="form-row">
@@ -67,18 +98,20 @@
 
     </form>
 
-    <!-- ANSWERS -->
-    <p>1&rpar; The "action" attribute in the form tag tells where the form data will be sent after the user clicks submit.</p>
+    <!-- ANSWERS SECTION -->
+    <section>
+        <h2>Answers</h2>
 
-    <p>2&rpar; The "method" attribute tells how the form data will be sent to the server, usually using GET or POST.</p>
+        <p>1&rpar; The "action" attribute in the form tag tells where the form data will be sent after submission.</p>
 
-    <p>3&rpar; The difference between GET and POST is that GET sends data in the URL and is less secure, while POST sends data in the request body and is more secure.</p>
+        <p>2&rpar; The "method" attribute tells how the form data is sent, usually using GET or POST.</p>
 
-    <p>Date: March 20, 2026</p>
+        <p>3&rpar; GET sends data in the URL and is less secure, while POST sends data in the request body and is more secure.</p>
 
-    <p>4&rpar; Forms can be styled by changing colors, fonts, borders, spacing, and sizes of inputs. We can also style buttons, add hover and focus effects, and adjust layout using CSS properties like flex and margins.</p>
+        <p>4&rpar; Forms can be styled using CSS properties like colors, padding, spacing, and layout techniques.</p>
 
-    <p>5&rpar; Flex helps arrange elements in a row on desktop for better spacing and alignment. On mobile, flex can change to column layout using media queries, so the form fields stack vertically and fit smaller screens properly.</p>
+        <p>5&rpar; Flexbox helps arrange elements in rows and can switch to column layout on smaller screens using media queries.</p>
+    </section>
 
 </main>
 
