@@ -14,14 +14,14 @@
 
 <main>
 
-    <form action="forms.html" method="get">
+    <form action="forms.html" method="get" id="myForm">
 
         <fieldset>
             <legend>Sign Up Form</legend>
 
             <div class="form-row">
-                <label for="fname">Name:</label>
-                <input type="text" name="fullname" id="fname" required>
+                <label for="name">Name:</label>
+                <input type="text" name="fullname" id="name" required>
             </div>
 
             <div class="form-row">
@@ -64,7 +64,7 @@
                     <label class="option-label"><input type="radio" name="gender" value="male"> Male</label>
                     <label class="option-label"><input type="radio" name="gender" value="female"> Female</label>
                 </div>
-            </div>
+            </div> 
 
             <div class="form-row">
                 <label class="group-label">Languages Known:</label>
@@ -111,13 +111,62 @@
         <p>4&rpar; Forms can be styled using CSS properties like colors, padding, spacing, and layout techniques.</p>
 
         <p>5&rpar; Flexbox helps arrange elements in rows and can switch to column layout on smaller screens using media queries.</p>
+
+        <p>Date 5/25/2026</p>
+
+        <p>6&rpar; JavaScript is a programming language used to make websites interactive, and it was named “JavaScript” to take advantage of the popularity of Java, even though the two are different.</p>
+
+        <p>7&rpar; JavaScript can be run in two ways: in a web browser (client-side) and on a server using Node.js </p>
+
+        <p>8&rpar; The most popular front-end JavaScript library in the past was jQuery.</p>
+
+        <p>9&rpar; The most popular front-end JavaScript library today is React. </p>
     </section>
+
+
 
 </main>
 
 <footer>
     <p>&copy; 2026 Israel Limma</p>
 </footer>
+
+<script>
+    document.getElementById('myForm').addEventListener('submit',function(event) {
+        event.preventDefault();
+        //alert("Form Submitted");
+
+        const Name = document.getElementById('name').value;
+        const Email = document.getElementById('email').value; 
+        const Password = document.getElementById('password').value;
+        const DateofBirth = document.getElementById('birthdate').value;
+        const State = document.getElementById('state').value;
+        
+        
+
+
+        if (!Name || !Email) {
+            alert("You need a name and email.");
+            return;;
+    }
+
+   
+
+    const formData = {
+        Name: Name,
+        Email: Email,
+        Password: Password,
+        DateofBirth: DateofBirth,
+
+
+    };
+
+    console.log(formData);
+
+    });
+
+
+</script>
 
 </body>
 </html>
