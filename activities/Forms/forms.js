@@ -7,7 +7,7 @@ event.preventDefault();
         const Password = document.getElementById('password').value;
         const DateofBirth = document.getElementById('birthdate').value;
         const State = document.getElementById('state').value;
-        
+        const age = document.getElementById('skill').value;
         
 
 
@@ -15,11 +15,12 @@ event.preventDefault();
             alert("You need a name and email.");
             return;;
     }
-    
-        if (!age || !age < 18) {
-            alert("You must be at least 18 years old or more.");
+
+
+        if (!age || age < 18) {
+             alert("You must be at least 18 years old or more.");
             return;
-    }   
+    }
 
     const formData = {
         Name: Name,
@@ -33,7 +34,7 @@ event.preventDefault();
     console.log(formData);
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "submit.json", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UFT-8");
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200){
             alert("Form submitted successfully!");
