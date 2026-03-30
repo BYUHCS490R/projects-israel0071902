@@ -15,8 +15,11 @@ event.preventDefault();
             alert("You need a name and email.");
             return;;
     }
-
-   
+    
+        if (!age || !age < 18) {
+            alert("You must be at least 18 years old or more.");
+            return;
+    }   
 
     const formData = {
         Name: Name,
