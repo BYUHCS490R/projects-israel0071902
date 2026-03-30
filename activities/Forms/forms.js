@@ -11,9 +11,9 @@ event.preventDefault();
         
 
 
-        if (!Name || !Email) {
-            alert("You need a name and email.");
-            return;;
+        if (!Name || !Email || !Password) {
+            alert("You need a name, email, and password.");
+            return;
     }
 
 
@@ -22,13 +22,13 @@ event.preventDefault();
             return;
     }
 
-    const formData = {
+        const formData = {
         Name: Name,
         Email: Email,
         Password: Password,
         DateofBirth: DateofBirth,
-
-
+        State: State,
+        age: age
     };
 
     console.log(formData);
