@@ -1,14 +1,23 @@
 document.getElementById('myForm').addEventListener('submit',function(event) {
 event.preventDefault();
-        //alert("Form Submitted");
 
-        const Name = document.getElementById('name').value;
-        const Email = document.getElementById('email').value; 
-        const Password = document.getElementById('password').value;
-        const DateofBirth = document.getElementById('birthdate').value;
-        const State = document.getElementById('state').value;
-        const age = document.getElementById('age').value;
-        
+const Name = document.getElementById('name').value;
+    const Email = document.getElementById('email').value;
+    const Password = document.getElementById('password').value;
+    const DateofBirth = document.getElementById('birthdate').value;
+    const age = document.getElementById('age').value;
+    const State = document.getElementById('state').value;
+    const Comments = document.getElementById('comments').value;
+    const Proficiency = document.getElementById('skill').value;
+
+    const GenderElement = document.querySelector('input[name="gender"]:checked');
+    const Gender = GenderElement ? GenderElement.value : "";
+
+    const LanguagesElement = document.querySelectorAll('input[name="language"]:checked');
+    const LanguagesKnown = [];
+    LanguagesElement.forEach(function(language) {
+        LanguagesKnown.push(language.value);
+    });
 
 
         if (!Name || !Email || !Password) {
@@ -28,10 +37,15 @@ event.preventDefault();
         Password: Password,
         DateofBirth: DateofBirth,
         State: State,
-        age: age
+        age: age,   
+        Comments: Comments,
+        Gender: Gender,
+        LanguagesKnown: LanguagesKnown,
+        Proficiency: Proficiency
     };
 
     console.log(formData);
+
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "submit.json", true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
