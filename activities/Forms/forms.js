@@ -7,7 +7,7 @@ event.preventDefault();
         const Password = document.getElementById('password').value;
         const DateofBirth = document.getElementById('birthdate').value;
         const State = document.getElementById('state').value;
-        const age = document.getElementById('skill').value;
+        const age = document.getElementById('age').value;
         
 
 
