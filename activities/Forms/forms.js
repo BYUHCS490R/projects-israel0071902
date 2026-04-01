@@ -13,9 +13,12 @@ event.preventDefault();
 
         if (!Name || !Email) {
             alert("You need a name and email.");
-            return;;
+            return;
     }
-
+        if (!age || age <18){
+            alert("You need to be 18 or more");
+            return;
+        }
    
 
     const formData = {
@@ -23,6 +26,7 @@ event.preventDefault();
         Email: Email,
         Password: Password,
         DateofBirth: DateofBirth,
+    
 
 
     };
