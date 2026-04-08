@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Form</title>
+    <link rel="stylesheet" href="final2.css">
+</head>
+<body>
+
+<header>
+    <h1>Add a Recipe</h1>
+</header>
+
+<nav>
+    <a href="final2.html">Home</a>
+    <a href="meals.html">Meals</a>
+    <a href="sweets.html">Sweets</a>
+    <a href="drinks.html">Drinks</a>
+    <a href="tips.html">Tips</a>
+    <a href="table.html">Table</a>
+    <a href="form.html" class="active">Form</a>
+</nav>
+
+<main>
+    <h2>Recipe Form</h2>
+    <p>Fill the form to add a recipe to the table.</p>
+
+    <h3>Edit Recipe</h3>
+
+    <label for="editName">Enter Recipe Name</label>
+    <input type="text" id="editName">
+
+    <label for="editCode">Enter 3-digit Code</label>
+    <input type="text" id="editCode" maxlength="3">
+
+    <button type="button" id="loadButton">Load</button>
+
+    <p id="editMessage"></p>
+
+    <form id="recipeForm">
+        <label for="name">Recipe Name</label>
+        <input type="text" id="name" required>
+
+        <label for="category">Category</label>
+        <select id="category" required>
+            <option value="">Select</option>
+            <option value="Meal">Meal</option>
+            <option value="Sweet">Sweet</option>
+            <option value="Drink">Drink</option>
+        </select>
+
+        <label for="time">Time</label>
+        <input type="text" id="time" required>
+
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty" required>
+            <option value="">Select</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+
+        <label for="cost">Cost</label>
+        <select id="cost" required>
+            <option value="">Select</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <label for="spice">Spice</label>
+        <select id="spice" required>
+            <option value="">Select</option>
+            <option value="None">None</option>
+            <option value="Mild">Mild</option>
+            <option value="Medium">Medium</option>
+            <option value="Hot">Hot</option>
+        </select>
+
+        <label for="ingredients">Ingredients </label>
+        <textarea id="ingredients" rows="3"></textarea>
+
+        <label for="steps">Recipe Steps </label>
+        <textarea id="steps" rows="3"></textarea>
+
+        <label for="comments">Comments</label>
+        <textarea id="comments" rows="3"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <button type="button" id="showFormButton" style="display:none;">Add Another Recipe</button>
+
+    <p id="message"></p>
+</main>
+
+<footer>
+    <p>&copy;2026 Israel Limma</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

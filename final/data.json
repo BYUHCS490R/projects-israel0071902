@@ -3,372 +3,154 @@
     "id": 1,
     "name": "Dal with Tempering (Tadka Dal)",
     "category": "Meal",
-    "image": "https://via.placeholder.com/250x180?text=Dal+Tadka",
-    "description": "Dal with tempering, also called tadka dal, is a very common Indian dish made with lentils. The dal is first cooked until soft, and then hot oil with spices is added on top. This tempering gives strong aroma, flavor, and makes the dal taste rich and delicious. It is usually eaten with rice or roti and is perfect for students because it is healthy, cheap, and easy to prepare.",
+    "image": "daal.jpeg",
+    "description": "Dal with tempering, also called tadka dal, is a common Indian dish made with lentils. The dal is cooked until soft, and then hot oil with spices is added on top. This tempering gives strong aroma and flavor. It is usually eaten with rice or roti and is healthy, cheap, and easy to prepare.",
     "time": "30 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "Mild",
-    "ingredients": [
-      "1 cup dal (toor dal or moong dal)",
-      "3 cups water",
-      "1/2 teaspoon turmeric",
-      "Salt to taste",
-      "2 tablespoons oil or ghee",
-      "1 teaspoon mustard seeds",
-      "1 teaspoon cumin seeds",
-      "2 dry red chilies",
-      "2 cloves garlic chopped",
-      "1 small onion optional",
-      "Curry leaves",
-      "A pinch of asafoetida"
-    ],
-    "steps": [
-      "Wash the dal well with water.",
-      "Add dal, water, and turmeric to a pot or cooker.",
-      "Cook until the dal becomes soft and mushy.",
-      "Add salt and mix well.",
-      "Heat oil or ghee in a small pan for tempering.",
-      "Add mustard seeds and let them crackle.",
-      "Add cumin seeds, dry red chilies, garlic, onion, and curry leaves.",
-      "Add asafoetida and cook until golden and aromatic.",
-      "Pour this hot tempering over the cooked dal.",
-      "Mix well and serve hot with rice."
-    ],
-    "editCode": "321"
+    "spice": "Mild"
   },
   {
     "id": 2,
     "name": "Jeera Rice",
     "category": "Meal",
-    "image": "https://via.placeholder.com/250x180?text=Jeera+Rice",
-    "description": "Jeera rice is a simple rice dish flavored with cumin seeds. It smells good, tastes light, and goes well with dal or curry. It is a nice choice when students want something quick but tasty.",
+    "image": "jeera.jpeg",
+    "description": "Jeera rice is a simple rice dish flavored with cumin seeds. It smells good, tastes light, and goes well with dal or curry.",
     "time": "20 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "None",
-    "ingredients": [
-      "1 cup rice",
-      "2 cups water",
-      "1 teaspoon jeera",
-      "1 tablespoon oil",
-      "Salt"
-    ],
-    "steps": [
-      "Wash the rice and keep it ready.",
-      "Heat oil in a pan.",
-      "Add jeera and cook for a few seconds.",
-      "Add rice, water, and salt.",
-      "Cook until the rice becomes soft and fluffy."
-    ],
-    "editCode": "322"
+    "spice": "None"
   },
   {
     "id": 3,
     "name": "Tamarind Rice",
     "category": "Meal",
-    "image": "https://via.placeholder.com/250x180?text=Tamarind+Rice",
-    "description": "Tamarind rice is a popular South Indian dish with a tangy and slightly spicy taste. It is made by mixing cooked rice with tamarind pulp and a seasoned spice mixture. It keeps well, so it is useful for lunch boxes and travel meals.",
+    "image": "tamrind.jpeg",
+    "description": "Tamarind rice is a popular South Indian dish with a tangy and slightly spicy taste. It is useful for lunch boxes and travel meals.",
     "time": "30 minutes",
     "difficulty": "Medium",
     "cost": "Low",
-    "spice": "Medium",
-    "ingredients": [
-      "2 cups cooked rice",
-      "Small lemon-size tamarind",
-      "2 tablespoons oil",
-      "1 teaspoon mustard seeds",
-      "1 teaspoon chana dal",
-      "1 teaspoon urad dal",
-      "2 dry red chilies",
-      "Salt",
-      "Turmeric",
-      "Peanuts"
-    ],
-    "steps": [
-      "Soak tamarind in warm water and take out the pulp.",
-      "Heat oil in a pan.",
-      "Add mustard seeds, chana dal, urad dal, chilies, and peanuts.",
-      "Add tamarind pulp, salt, and turmeric and cook until thick.",
-      "Mix this tamarind mixture into the cooked rice.",
-      "Stir gently and serve."
-    ],
-    "editCode": "323"
+    "spice": "Medium"
   },
   {
     "id": 4,
     "name": "Chicken Curry",
     "category": "Meal",
-    "image": "https://via.placeholder.com/250x180?text=Chicken+Curry",
-    "description": "Chicken curry is a rich and flavorful dish made with chicken, onions, tomatoes, and spices. It tastes good with rice or chapati and is a popular meal in many Indian homes.",
+    "image": "chicken.jpeg",
+    "description": "Chicken curry is a rich and flavorful dish made with chicken, onions, tomatoes, and spices. It tastes good with rice or chapati.",
     "time": "40 minutes",
     "difficulty": "Medium",
     "cost": "Medium",
-    "spice": "Hot",
-    "ingredients": [
-      "500 grams chicken",
-      "1 onion",
-      "2 tomatoes",
-      "2 tablespoons oil",
-      "Salt",
-      "Chili powder",
-      "Turmeric",
-      "Garam masala"
-    ],
-    "steps": [
-      "Heat oil in a pan.",
-      "Cook onion until soft.",
-      "Add tomatoes and spices.",
-      "Add chicken and mix well.",
-      "Cook until the chicken becomes tender.",
-      "Serve hot with rice."
-    ],
-    "editCode": "324"
+    "spice": "Hot"
   },
   {
     "id": 5,
     "name": "Egg Curry",
     "category": "Meal",
-    "image": "https://via.placeholder.com/250x180?text=Egg+Curry",
-    "description": "Egg curry is a simple dish made with boiled eggs in a spicy onion and tomato gravy. It is easier than chicken curry and is good for students who want a filling meal with basic ingredients.",
+    "image": "egg.jpeg",
+    "description": "Egg curry is a simple dish made with boiled eggs in a spicy onion and tomato gravy. It is a filling meal with basic ingredients.",
     "time": "30 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "Medium",
-    "ingredients": [
-      "4 eggs",
-      "1 onion",
-      "2 tomatoes",
-      "2 tablespoons oil",
-      "Salt",
-      "Chili powder",
-      "Turmeric"
-    ],
-    "steps": [
-      "Boil the eggs and remove the shells.",
-      "Heat oil in a pan.",
-      "Cook onion and tomato with spices.",
-      "Add a little water to make gravy.",
-      "Put the eggs into the curry.",
-      "Cook for a few minutes and serve."
-    ],
-    "editCode": "325"
+    "spice": "Medium"
   },
   {
     "id": 6,
     "name": "Laddu",
     "category": "Sweet",
-    "image": "https://via.placeholder.com/250x180?text=Laddu",
-    "description": "Laddu is a round Indian sweet often made during festivals and celebrations. It is sweet, soft, and rich. Many families prepare different types of laddu at home.",
+    "image": "ladddu.jpeg",
+    "description": "Laddu is a round Indian sweet often made during festivals and celebrations. It is sweet, soft, and rich.",
     "time": "30 minutes",
     "difficulty": "Medium",
     "cost": "Medium",
-    "spice": "None",
-    "ingredients": [
-      "1 cup flour",
-      "1/2 cup sugar",
-      "1/4 cup ghee"
-    ],
-    "steps": [
-      "Heat ghee in a pan.",
-      "Roast the flour slowly.",
-      "Add sugar and mix well.",
-      "Let it cool a little.",
-      "Make small round balls."
-    ],
-    "editCode": "654"
+    "spice": "None"
   },
   {
     "id": 7,
     "name": "Gulab Jamun",
     "category": "Sweet",
-    "image": "https://via.placeholder.com/250x180?text=Gulab+Jamun",
-    "description": "Gulab jamun is a famous Indian sweet made from soft dough balls that are fried and soaked in sugar syrup. It is very sweet and is often served at parties and special occasions.",
+    "image": "gulab.jpeg",
+    "description": "Gulab jamun is a famous Indian sweet made from soft dough balls that are fried and soaked in sugar syrup.",
     "time": "35 minutes",
     "difficulty": "Medium",
     "cost": "Medium",
-    "spice": "None",
-    "ingredients": [
-      "1 cup milk powder",
-      "2 tablespoons flour",
-      "Sugar",
-      "Water",
-      "Oil or ghee"
-    ],
-    "steps": [
-      "Make soft dough with milk powder and flour.",
-      "Shape small balls.",
-      "Fry them on low heat.",
-      "Prepare sugar syrup in another pan.",
-      "Put fried balls into the syrup.",
-      "Let them soak and serve."
-    ],
-    "editCode": "655"
+    "spice": "None"
   },
   {
     "id": 8,
     "name": "Semiya",
     "category": "Sweet",
-    "image": "https://via.placeholder.com/250x180?text=Semiya",
-    "description": "Semiya is a sweet dish made with vermicelli, milk, and sugar. It is soft and comforting and is often prepared quickly for guests or family dessert.",
+    "image": "semiya.jpeg",
+    "description": "Semiya is a sweet dish made with vermicelli, milk, and sugar. It is soft and comforting.",
     "time": "20 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "None",
-    "ingredients": [
-      "1 cup vermicelli",
-      "2 cups milk",
-      "Sugar",
-      "1 tablespoon ghee"
-    ],
-    "steps": [
-      "Heat ghee in a pan.",
-      "Roast the vermicelli lightly.",
-      "Add milk and cook until soft.",
-      "Add sugar and stir well.",
-      "Serve warm or cool."
-    ],
-    "editCode": "656"
+    "spice": "None"
   },
   {
     "id": 9,
     "name": "Halwa",
     "category": "Sweet",
-    "image": "https://via.placeholder.com/250x180?text=Halwa",
+    "image": "halwa.jpeg",
     "description": "Halwa is a soft and warm Indian sweet. It is easy to make and has a rich taste because of ghee and sugar.",
     "time": "20 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "None",
-    "ingredients": [
-      "1 cup semolina",
-      "1/2 cup sugar",
-      "2 tablespoons ghee",
-      "2 cups water"
-    ],
-    "steps": [
-      "Heat ghee in a pan.",
-      "Roast semolina carefully.",
-      "Add water slowly.",
-      "Add sugar and stir well.",
-      "Cook until thick and soft."
-    ],
-    "editCode": "657"
+    "spice": "None"
   },
   {
     "id": 10,
     "name": "Jeera Water",
     "category": "Drink",
-    "image": "https://via.placeholder.com/250x180?text=Jeera+Water",
-    "description": "Jeera water is a light and simple drink made with cumin seeds and water. It is often taken as a refreshing and soothing drink.",
+    "image": "jeerawater.jpeg",
+    "description": "Jeera water is a light and simple drink made with cumin seeds and water. It is refreshing and soothing.",
     "time": "10 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "None",
-    "ingredients": [
-      "1 teaspoon jeera",
-      "2 cups water"
-    ],
-    "steps": [
-      "Boil water in a pot.",
-      "Add jeera to the water.",
-      "Let it cool.",
-      "Strain if needed and serve."
-    ],
-    "editCode": "987"
+    "spice": "None"
   },
   {
     "id": 11,
     "name": "Buttermilk",
     "category": "Drink",
-    "image": "https://via.placeholder.com/250x180?text=Buttermilk",
-    "description": "Buttermilk is a cool and simple drink that is perfect for hot weather. It is light, refreshing, and easy to make with curd and water.",
+    "image": "bm.jpeg",
+    "description": "Buttermilk is a cool and simple drink that is perfect for hot weather. It is light, refreshing, and easy to make.",
     "time": "8 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "Mild",
-    "ingredients": [
-      "1 cup curd",
-      "2 cups water",
-      "Salt",
-      "Curry leaves"
-    ],
-    "steps": [
-      "Put curd and water in a bowl.",
-      "Mix well until smooth.",
-      "Add salt and curry leaves.",
-      "Serve cool."
-    ],
-    "editCode": "988"
+    "spice": "Mild"
   },
   {
     "id": 12,
     "name": "Lemon Soda",
     "category": "Drink",
-    "image": "https://via.placeholder.com/250x180?text=Lemon+Soda",
-    "description": "Lemon soda is a refreshing drink made with lemon, soda, salt, and sugar. It is quick to prepare and is very popular in warm weather.",
+    "image": "lemon.jpeg",
+    "description": "Lemon soda is a refreshing drink made with lemon, soda, salt, and sugar. It is quick to prepare.",
     "time": "5 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "None",
-    "ingredients": [
-      "1 lemon",
-      "1 glass soda",
-      "Salt",
-      "Sugar"
-    ],
-    "steps": [
-      "Squeeze lemon juice into a glass.",
-      "Add a little salt and sugar.",
-      "Pour soda into the glass.",
-      "Mix gently and serve immediately."
-    ],
-    "editCode": "989"
+    "spice": "None"
   },
   {
     "id": 13,
     "name": "Lassi",
     "category": "Drink",
-    "image": "https://via.placeholder.com/250x180?text=Lassi",
+    "image": "lassi.jpeg",
     "description": "Lassi is a cool and refreshing yogurt drink. It is smooth, simple, and perfect for hot days.",
     "time": "10 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "None",
-    "ingredients": [
-      "1 cup yogurt",
-      "1 cup water",
-      "Sugar"
-    ],
-    "steps": [
-      "Put yogurt, water, and sugar in a mixer.",
-      "Blend until smooth.",
-      "Pour into a glass.",
-      "Serve cold."
-    ],
-    "editCode": "990"
+    "spice": "None"
   },
   {
     "id": 14,
     "name": "Sharbath",
     "category": "Drink",
-    "image": "https://via.placeholder.com/250x180?text=Sharbath",
+    "image": "sar.jpeg",
     "description": "Sharbath is a sweet and colorful drink for warm days. It is simple to make and is liked by many people.",
     "time": "6 minutes",
     "difficulty": "Easy",
     "cost": "Low",
-    "spice": "None",
-    "ingredients": [
-      "Sharbath syrup",
-      "Water",
-      "Ice"
-    ],
-    "steps": [
-      "Pour syrup into a glass.",
-      "Add water.",
-      "Mix well.",
-      "Add ice and serve."
-    ],
-    "editCode": "991"
+    "spice": "None"
   }
 ]

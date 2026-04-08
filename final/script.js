@@ -1,84 +1,21 @@
-let allRecipes = [];
-let currentEditIndex = -1;
+var editIndex = -1;
 
-function loadRecipes() {
-    let savedRecipes = localStorage.getItem("recipes");
+function getAddedRecipes() {
+    var savedRecipes = localStorage.getItem("addedRecipes");
 
     if (savedRecipes) {
-        allRecipes = JSON.parse(savedRecipes);
-        showPageData();
+        return JSON.parse(savedRecipes);
     } else {
-        fetch("data.json")
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                allRecipes = data;
-                localStorage.setItem("recipes", JSON.stringify(allRecipes));
-                showPageData();
-            });
+        return [];
     }
 }
 
-function makeThreeDigitCode() {
-    return Math.floor(100 + Math.random() * 900).toString();
-}
-
-function showPageData() {
-    showRecipesByCategory("Meal", "mealList");
-    showRecipesByCategory("Sweet", "sweetList");
-    showRecipesByCategory("Drink", "drinkList");
-    showRecipeTable();
-}
-
-function makeList(items) {
-    let text = "<ul>";
-
-    for (let i = 0; i < items.length; i++) {
-        text += "<li>" + items[i] + "</li>";
-    }
-
-    text += "</ul>";
-    return text;
-}
-
-function showRecipesByCategory(category, elementId) {
-    let box = document.getElementById(elementId);
-
-    if (!box) {
-        return;
-    }
-
-    box.innerHTML = "";
-
-    for (let i = 0; i < allRecipes.length; i++) {
-        if (allRecipes[i].category === category) {
-            let imagePart = "";
-
-            if (allRecipes[i].image !== "") {
-                imagePart = "<img src='" + allRecipes[i].image + "' alt='" + allRecipes[i].name + "'>";
-            }
-
-            box.innerHTML +=
-                "<div class='recipe-box'>" +
-                "<h3>" + allRecipes[i].name + "</h3>" +
-                imagePart +
-                "<p>" + allRecipes[i].description + "</p>" +
-                "<p><strong>Time:</strong> " + allRecipes[i].time + "</p>" +
-                "<p><strong>Difficulty:</strong> " + allRecipes[i].difficulty + "</p>" +
-                "<p><strong>Cost:</strong> " + allRecipes[i].cost + "</p>" +
-                "<p><strong>Spice:</strong> " + allRecipes[i].spice + "</p>" +
-                "<p><strong>Ingredients:</strong></p>" +
-                makeList(allRecipes[i].ingredients) +
-                "<p><strong>Steps:</strong></p>" +
-                makeList(allRecipes[i].steps) +
-                "</div>";
-        }
-    }
+function saveAddedRecipes(recipes) {
+    localStorage.setItem("addedRecipes", JSON.stringify(recipes));
 }
 
 function showRecipeTable() {
-    let tableBody = document.getElementById("recipeTableBody");
+    var tableBody = document.getElementById("recipeTableBody");
 
     if (!tableBody) {
         return;
@@ -86,22 +23,88 @@ function showRecipeTable() {
 
     tableBody.innerHTML = "";
 
-    for (let i = 0; i < allRecipes.length; i++) {
-        tableBody.innerHTML +=
-            "<tr>" +
-            "<td>" + (i + 1) + "</td>" +
-            "<td>" + allRecipes[i].name + "</td>" +
-            "<td>" + allRecipes[i].category + "</td>" +
-            "<td>" + allRecipes[i].time + "</td>" +
-            "<td>" + allRecipes[i].difficulty + "</td>" +
-            "<td>" + allRecipes[i].cost + "</td>" +
-            "<td>" + allRecipes[i].spice + "</td>" +
-            "</tr>";
+    fetch("data.json")
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(jsonRecipes) {
+            var addedRecipes = getAddedRecipes();
+            var allRecipes = jsonRecipes.concat(addedRecipes);
+
+            for (var i = 0; i < allRecipes.length; i++) {
+                tableBody.innerHTML +=
+                    "<tr>" +
+                    "<td>" + (i + 1) + "</td>" +
+                    "<td>" + allRecipes[i].name + "</td>" +
+                    "<td>" + allRecipes[i].category + "</td>" +
+                    "<td>" + allRecipes[i].time + "</td>" +
+                    "<td>" + allRecipes[i].difficulty + "</td>" +
+                    "<td>" + allRecipes[i].cost + "</td>" +
+                    "<td>" + allRecipes[i].spice + "</td>" +
+                    "</tr>";
+            }
+        })
+        .catch(function() {
+            tableBody.innerHTML =
+                "<tr><td colspan='7'>Error loading data</td></tr>";
+        });
+}
+
+function makeThreeDigitCode() {
+    return Math.floor(100 + Math.random() * 900).toString();
+}
+
+function loadRecipe() {
+    var nameBox = document.getElementById("editName");
+    var codeBox = document.getElementById("editCode");
+    var editMessage = document.getElementById("editMessage");
+    var form = document.getElementById("recipeForm");
+    var showFormButton = document.getElementById("showFormButton");
+
+    if (!nameBox || !codeBox || !editMessage || !form) {
+        return;
+    }
+
+    var name = nameBox.value.trim().toLowerCase();
+    var code = codeBox.value.trim();
+    var recipes = getAddedRecipes();
+    var found = false;
+
+    for (var i = 0; i < recipes.length; i++) {
+        if (recipes[i].name.toLowerCase() === name && recipes[i].code === code) {
+            document.getElementById("name").value = recipes[i].name;
+            document.getElementById("category").value = recipes[i].category;
+            document.getElementById("time").value = recipes[i].time;
+            document.getElementById("difficulty").value = recipes[i].difficulty;
+            document.getElementById("cost").value = recipes[i].cost;
+            document.getElementById("spice").value = recipes[i].spice;
+            document.getElementById("ingredients").value = recipes[i].ingredients || "";
+            document.getElementById("steps").value = recipes[i].steps || "";
+            document.getElementById("comments").value = recipes[i].comments || "";
+
+            editIndex = i;
+            form.style.display = "block";
+
+            if (showFormButton) {
+                showFormButton.style.display = "none";
+            }
+
+            editMessage.innerHTML = "Recipe loaded. Now edit and submit.";
+            document.getElementById("message").innerHTML = "";
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        editMessage.innerHTML = "Wrong recipe name or 3-digit code.";
     }
 }
 
 function setupForm() {
-    let form = document.getElementById("recipeForm");
+    var form = document.getElementById("recipeForm");
+    var message = document.getElementById("message");
+    var showFormButton = document.getElementById("showFormButton");
 
     if (!form) {
         return;
@@ -110,135 +113,96 @@ function setupForm() {
     form.onsubmit = function(event) {
         event.preventDefault();
 
-        let recipeName = document.getElementById("recipeName").value;
-        let category = document.getElementById("category").value;
-        let image = document.getElementById("image").value;
-        let description = document.getElementById("description").value;
-        let time = document.getElementById("time").value;
-        let difficulty = document.getElementById("difficulty").value;
-        let cost = document.getElementById("cost").value;
-        let spice = document.getElementById("spice").value;
-        let ingredients = document.getElementById("ingredients").value;
-        let steps = document.getElementById("steps").value;
+        var name = document.getElementById("name").value;
+        var category = document.getElementById("category").value;
+        var time = document.getElementById("time").value;
+        var difficulty = document.getElementById("difficulty").value;
+        var cost = document.getElementById("cost").value;
+        var spice = document.getElementById("spice").value;
+        var ingredients = document.getElementById("ingredients").value;
+        var steps = document.getElementById("steps").value;
+        var comments = document.getElementById("comments").value;
 
-        let code = "";
+        var recipes = getAddedRecipes();
+        var code = "";
 
-        if (currentEditIndex === -1) {
+        if (editIndex === -1) {
             code = makeThreeDigitCode();
+
+            var newRecipe = {
+                id: new Date().getTime(),
+                name: name,
+                category: category,
+                time: time,
+                difficulty: difficulty,
+                cost: cost,
+                spice: spice,
+                ingredients: ingredients,
+                steps: steps,
+                comments: comments,
+                code: code
+            };
+
+            recipes.push(newRecipe);
+
+            alert("Recipe added! Your 3-digit code is: " + code);
+            message.innerHTML = "Recipe added successfully! Your 3-digit code is: " + code;
         } else {
-            code = allRecipes[currentEditIndex].editCode;
+            code = recipes[editIndex].code;
+
+            recipes[editIndex].name = name;
+            recipes[editIndex].category = category;
+            recipes[editIndex].time = time;
+            recipes[editIndex].difficulty = difficulty;
+            recipes[editIndex].cost = cost;
+            recipes[editIndex].spice = spice;
+            recipes[editIndex].ingredients = ingredients;
+            recipes[editIndex].steps = steps;
+            recipes[editIndex].comments = comments;
+
+            alert("Recipe updated successfully! Your 3-digit code is: " + code);
+            message.innerHTML = "Recipe updated successfully! Your 3-digit code is: " + code;
+
+            editIndex = -1;
         }
 
-        let newRecipe = {
-            id: Date.now(),
-            name: recipeName,
-            category: category,
-            image: image,
-            description: description,
-            time: time,
-            difficulty: difficulty,
-            cost: cost,
-            spice: spice,
-            ingredients: ingredients.split(",").map(function(item) {
-                return item.trim();
-            }),
-            steps: steps.split(",").map(function(item) {
-                return item.trim();
-            }),
-            editCode: code
-        };
-
-        let messageText = "";
-
-        if (currentEditIndex === -1) {
-            allRecipes.push(newRecipe);
-            messageText = "Form submitted successfully! If you want to edit your recipe later, use this 3-digit code: " + code;
-        } else {
-            allRecipes[currentEditIndex] = newRecipe;
-            messageText = "Recipe updated successfully! If you want to edit it again later, use this 3-digit code: " + code;
-            currentEditIndex = -1;
-            document.getElementById("formTitle").innerHTML = "Add a Recipe";
-            document.getElementById("submitButton").innerHTML = "Add Recipe";
-        }
-
-        localStorage.setItem("recipes", JSON.stringify(allRecipes));
-        document.getElementById("message").innerHTML = messageText;
-        alert(messageText);
+        saveAddedRecipes(recipes);
 
         form.reset();
-        document.getElementById("editRecipeName").value = "";
+        form.style.display = "none";
+
+        document.getElementById("editName").value = "";
         document.getElementById("editCode").value = "";
         document.getElementById("editMessage").innerHTML = "";
-        document.getElementById("recipeForm").style.display = "none";
 
-        let showFormButton = document.getElementById("showFormButton");
         if (showFormButton) {
             showFormButton.style.display = "inline-block";
         }
     };
 }
 
-function setupEditSearch() {
-    let editButton = document.getElementById("loadEditButton");
+function setupButtons() {
+    var loadButton = document.getElementById("loadButton");
+    var showFormButton = document.getElementById("showFormButton");
+    var form = document.getElementById("recipeForm");
+    var message = document.getElementById("message");
 
-    if (!editButton) {
-        return;
+    if (loadButton) {
+        loadButton.onclick = loadRecipe;
     }
 
-    editButton.onclick = function() {
-        let searchName = document.getElementById("editRecipeName").value.trim().toLowerCase();
-        let searchCode = document.getElementById("editCode").value.trim();
-        let found = false;
-
-        for (let i = 0; i < allRecipes.length; i++) {
-            if (allRecipes[i].name.toLowerCase() === searchName && allRecipes[i].editCode === searchCode) {
-                document.getElementById("recipeName").value = allRecipes[i].name;
-                document.getElementById("category").value = allRecipes[i].category;
-                document.getElementById("image").value = allRecipes[i].image;
-                document.getElementById("description").value = allRecipes[i].description;
-                document.getElementById("time").value = allRecipes[i].time;
-                document.getElementById("difficulty").value = allRecipes[i].difficulty;
-                document.getElementById("cost").value = allRecipes[i].cost;
-                document.getElementById("spice").value = allRecipes[i].spice;
-                document.getElementById("ingredients").value = allRecipes[i].ingredients.join(", ");
-                document.getElementById("steps").value = allRecipes[i].steps.join(", ");
-
-                currentEditIndex = i;
-                document.getElementById("formTitle").innerHTML = "Edit Recipe";
-                document.getElementById("submitButton").innerHTML = "Update Recipe";
-                document.getElementById("editMessage").innerHTML = "Recipe loaded. Now you can edit it.";
-                document.getElementById("recipeForm").style.display = "block";
-
-                let showFormButton = document.getElementById("showFormButton");
-                if (showFormButton) {
-                    showFormButton.style.display = "none";
-                }
-
-                found = true;
-                break;
-            }
-        }
-
-        if (!found) {
-            document.getElementById("editMessage").innerHTML = "Wrong recipe name or 3-digit code.";
-        }
-    };
+    if (showFormButton) {
+        showFormButton.onclick = function() {
+            form.style.display = "block";
+            showFormButton.style.display = "none";
+            message.innerHTML = "";
+            editIndex = -1;
+        };
+    }
 }
 
 window.onload = function() {
-    loadRecipes();
+    showRecipeTable();
     setupForm();
-    setupEditSearch();
-
-    let showFormButton = document.getElementById("showFormButton");
-    if (showFormButton) {
-        showFormButton.onclick = function() {
-            document.getElementById("recipeForm").style.display = "block";
-            document.getElementById("showFormButton").style.display = "none";
-            document.getElementById("message").innerHTML = "";
-            document.getElementById("formTitle").innerHTML = "Add a Recipe";
-            document.getElementById("submitButton").innerHTML = "Add Recipe";
-            currentEditIndex = -1;
-        };
-    }
+    setupButtons();
 };
