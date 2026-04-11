@@ -155,19 +155,18 @@ footer {
     color: #333;
 }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 560px;
-    margin: 20px auto;
-    padding-bottom: 56.25%;
-}
+@media (min-width: 768px) {
+    .video-container {
+        width: 560px;
+        height: 315px;
+        padding-bottom: 0;
+    }
 
-.video-container iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: none;
+    .video-container iframe {
+        position: static;
+        width: 560px;
+        height: 315px;
+    }
 }
 
 @media (max-width: 900px) {
